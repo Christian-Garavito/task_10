@@ -104,17 +104,13 @@ def main():
     grupos_ordenados = list(
         reduce(
             # para copiar los catos de un array ...prev js
-            lambda prev, curr: [
-                *prev,
-                *curr,
-            ],  # Concatena las listas de equipos ordenados de cada grupo
+            lambda prev, curr: [*prev,*curr],  # Concatena las listas de equipos ordenados de cada grupo
             map(
                 lambda grupo: sorted(
                     grupo,
                     key=lambda equipo: equipo["points"] * 100
                     + equipo["pro_goals"] * 10
-                    + equipo["ag_goal"]
-                    * -1,  # Ordena por puntos, goles a favor y goles en contra
+                    + equipo["ag_goal"]* -1,  # Ordena por puntos, goles a favor y goles en contra
                     reverse=True,
                 ),
                 grupos,
