@@ -3,29 +3,37 @@
     "name": "Chile",
     "group": "A",
     "games_played": 3,
-    "pro_goals": 5,
+    "pro_goals": 7,
+    "ag_goal": 5,
+    "points": 7
+  },
+  {
+    "name": "Peru",
+    "group": "A",
+    "games_played": 3,
+    "pro_goals": 6,
     "ag_goal": 4,
     "points": 6
   },
   {
-    "name": "Argentina",
-    "group": "A",
+    "name": "Venezuela",
+    "group": "B",
     "games_played": 3,
-    "pro_goals": 4,
+    "pro_goals": 8,
     "ag_goal": 3,
-    "points": 6
+    "points": 9
   },
   {
     "name": "Mexico",
     "group": "B",
     "games_played": 3,
-    "pro_goals": 7,
+    "pro_goals": 8,
     "ag_goal": 6,
-    "points": 6
+    "points": 4
   },
   {
-    "name": "Jamaica",
-    "group": "B",
+    "name": "Panama",
+    "group": "C",
     "games_played": 3,
     "pro_goals": 5,
     "ag_goal": 5,
@@ -35,31 +43,23 @@
     "name": "Estados Unidos",
     "group": "C",
     "games_played": 3,
-    "pro_goals": 7,
-    "ag_goal": 2,
-    "points": 9
-  },
-  {
-    "name": "Panama",
-    "group": "C",
-    "games_played": 3,
-    "pro_goals": 6,
+    "pro_goals": 4,
     "ag_goal": 4,
-    "points": 6
+    "points": 4
   },
   {
     "name": "Colombia",
     "group": "D",
     "games_played": 3,
-    "pro_goals": 8,
-    "ag_goal": 5,
+    "pro_goals": 6,
+    "ag_goal": 3,
     "points": 7
   },
   {
     "name": "Costa Rica",
     "group": "D",
     "games_played": 3,
-    "pro_goals": 5,
+    "pro_goals": 3,
     "ag_goal": 4,
     "points": 4
   }
