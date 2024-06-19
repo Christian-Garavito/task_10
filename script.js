@@ -140,6 +140,7 @@ const copaAmerica2024SinModificar = structuredClone(copaAmerica2024);
 let ganadores = [];
 
 
+// [] => []
 
 // Función para jugar la copa
 const jugarCopa = () => {
