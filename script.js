@@ -139,64 +139,7 @@ const copaAmerica2024SinModificar = structuredClone(copaAmerica2024);
 // Inicializamos un array vacío para almacenar los ganadores
 let ganadores = [];
 
-// Función para dibujar las tablas de los grupos
-const dibujarTablas = (grupos) => {
-    // Obtenemos el div raíz del DOM y lo limpiamos
-    const rootDiv = document.getElementById("root");
-    rootDiv.innerHTML = "";
 
-    // Iteramos sobre cada grupo para crear su tabla correspondiente
-    for (const grupo of grupos) {
-        // Creamos un div para el grupo
-        const divGrupo = document.createElement("div");
-        divGrupo.className = "group_div";
-
-        // Creamos un título para el grupo
-        const tituloGrupo = document.createElement("h2");
-        tituloGrupo.className = "titulo_grupo";
-        tituloGrupo.innerText = "Grupo " + grupo[0].group;
-
-        // Añadimos el título del grupo al div del grupo
-        divGrupo.appendChild(tituloGrupo);
-
-        // Iteramos sobre cada equipo en el grupo
-        for (const team of grupo) {
-            // Creamos un div para la información del equipo
-            const teamDiv = document.createElement("div");
-            teamDiv.className = "team_info";
-            teamDiv.id = team.name;
-
-            // Creamos un título para el equipo
-            const teamTitulo = document.createElement("h3");
-            teamTitulo.innerText = team.name.toUpperCase();
-
-            // Añadimos el título del equipo al div del equipo
-            teamDiv.appendChild(teamTitulo);
-
-            // Creamos y añadimos la información de los juegos jugados
-            const infoJuegos = document.createElement("p");
-            infoJuegos.innerText = "Numero de juegos: " + team.games_played;
-            const infoPuntos = document.createElement("p");
-            infoPuntos.innerText = "Puntos: " + team.points;
-            const infoGolesPro = document.createElement("p");
-            infoGolesPro.innerText = "Goles hechos: " + team.pro_goals;
-            const infoGolesAg = document.createElement("p");
-            infoGolesAg.innerText = "Goles en contra: " + team.ag_goal;
-
-            // Añadimos la información al div del equipo
-            teamDiv.appendChild(infoJuegos);
-            teamDiv.appendChild(infoPuntos);
-            teamDiv.appendChild(infoGolesPro);
-            teamDiv.appendChild(infoGolesAg);
-
-            // Añadimos el div del equipo al div del grupo
-            divGrupo.appendChild(teamDiv);
-        }
-
-        // Añadimos el div del grupo al div raíz
-        rootDiv.appendChild(divGrupo);
-    }
-};
 
 // Función para jugar la copa
 const jugarCopa = () => {
@@ -206,25 +149,6 @@ const jugarCopa = () => {
         copaAmerica2024SinModificar.teams.filter(({ group }) => group === "C"),
         copaAmerica2024SinModificar.teams.filter(({ group }) => group === "D"),
     ]);
-     // for (let k = 0; k < grupos.length; k++) {
-    //   const grupo = grupos[k];
-    // }
-
-    // for (let i = 0; i < 4; i++) {
-    //   for (let j = 0; j < 4; j++) {
-    //     if (i < j) {
-    //       console.log("*");
-    //     }
-    //   }
-    //   console.log("============================");
-    // }
-    //   accp
-    // ? ax***
-    // ? cxx**
-    // ? cxxx*
-    // ? pxxxx
-    // Creamos una copia estructurada de los grupos, filtrando por cada grupo
-
     // Iteramos sobre cada grupo
     for (const grupo of grupos) {
         // console.log(
@@ -247,18 +171,6 @@ const jugarCopa = () => {
                          goles_j +
                          "]"
                      );
-
-                    // i = 1; p = 3
-                    // j = 0; p = 0
-                    // i - j = 1
-
-                    // i = 2; p = 1
-                    // j = 2; p = 1
-                    // i - j = 0
-
-                    // i = 1; p = 0
-                    // j = 3; p = 3
-                    // i - j = -2
 
                     const diff_goles = goles_i - goles_j;
 
@@ -330,9 +242,4 @@ const exportarJson = () => {
     a.click();
 };
 
-dibujarTablas([
-    copaAmerica2024SinModificar.teams.filter(({ group }) => group === "A"),
-    copaAmerica2024SinModificar.teams.filter(({ group }) => group === "B"),
-    copaAmerica2024SinModificar.teams.filter(({ group }) => group === "C"),
-    copaAmerica2024SinModificar.teams.filter(({ group }) => group === "D"),
-  ]);
+
